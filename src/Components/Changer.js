@@ -7,6 +7,7 @@ function Changer() {
     const [backgroundColor, setColor] = useState('black');
 
     useEffect(() => {
+
         setMessage("Ooops, you're late.");
     }, [])
 
@@ -28,7 +29,7 @@ const Messenger = styled.div`
     width: 100vw;
     height: 100vh;
     color: white;
-    background-color: ${(props) => {props.backgroundState}};
+    background-color: ${props => (props.backgroundState)};
     align-items: center;
     justify-content: center;
 `
